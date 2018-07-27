@@ -1,7 +1,7 @@
 import Data.List (groupBy)
 
-encode str = map (\(x:xs) -> (length (x:xs), x)) splitted
-  where splitted = groupBy (\x y -> x == y) str
+encode str = map (\xs@(x:_) -> (length xs, x)) splitted
+  where splitted = groupBy (==) str
 
 main = do
     let str = "aaaabccaadeeee"
