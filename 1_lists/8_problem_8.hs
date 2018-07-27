@@ -1,6 +1,6 @@
-import Data.List (group, nub, sort)
+import Data.List (group, nub)
 
 compress = concatMap nub . group
 
 main = do
-    print $ compress "aaaabccaadeeee"
+    print $ compress "aaaabccaadeeee" -- "abcade"
