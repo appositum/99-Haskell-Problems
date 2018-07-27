@@ -1,5 +1,5 @@
-import Data.Function
-import Data.List
+import Data.Function (on)
+import Data.List (sortBy)
 
 lsort :: [[a]] -> [[a]]
 lsort xs = sortBy (compare `on` length) xs
