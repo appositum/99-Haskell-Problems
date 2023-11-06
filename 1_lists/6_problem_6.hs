@@ -2,6 +2,7 @@ isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome arr = arr == reversed
   where reversed = foldl (\acc x -> x:acc) [] arr
 
+main :: IO ()
 main = do
     print $ isPalindrome [1,2,3] -- False
     print $ isPalindrome "madamimadam" -- True
